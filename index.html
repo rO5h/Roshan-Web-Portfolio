@@ -5,8 +5,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roshan-Portfolio</title>
-    <base href="/Roshan-Web-Portfolio/" />
-    <!--<base href="/" />-->
+
+    <!-- Dynamically set base href -->
+    <script>
+        if (window.location.hostname === "localhost") {
+            document.write('<base href="/" />'); // For local development
+        } else {
+            document.write('<base href="/Roshan-Web-Portfolio/" />'); // For GitHub Pages
+        }
+    </script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <!-- Set the favicon here -->
     <link rel="icon" href="favicon.png" type="image/png" />
