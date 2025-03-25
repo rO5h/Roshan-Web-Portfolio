@@ -46,6 +46,50 @@
     width:100%;
     justify-items:center;
 }
+
+.contact-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    justify-items: center;
+    align-content:center;
+}
+    .contact-section ul {
+        max-width: 350px;
+        align-content: center;
+    }
+    .contact-section li {       
+        text-align: center;
+    }
+    /* Center the image without needing a separate class */
+    .contact-section img {
+        display: block; /* Makes it behave like a block for centering */
+        margin: 0 auto; /* Centers the image horizontally */
+        max-width: 250px; /* Optional: Adjust size */
+    }
+
+.email-phone-section {
+    display: flex;
+    justify-content: center; /* Centers the entire section */
+    align-items: flex-start; /* Aligns items at the start */
+    width: 100%;
+    margin-top: 10px;
+}
+    .email-phone-section ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        width: fit-content; /* Ensures the content doesn't stretch */
+        text-align: left; /* Aligns text inside */
+    }
+
+    .email-phone-section li {
+        text-align: left; 
+    }
+
 .project-section {
     padding: 20px;
     margin-bottom: 20px;
@@ -144,35 +188,39 @@ ul {
 
 /* Basic styling for the navigation menu */
 .nav-menu {
-    background-color: #333; /* Dark background */
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;  
 }
 
-    .nav-menu a {
+/* Styling for the links inside the navigation */
+.nav-link {
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #575757;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    touch-action: manipulation; /* Improves touch responsiveness */
+}
+
+    /* Add a hover effect */
+    .nav-link:hover {
+        background-color: #333;
+        transform: scale(1.1);
         color: white;
-        padding: 10px 20px;
-        margin: 0 10px;
-        text-decoration: none;
-        font-size: 16px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-        /* Add a hover effect */
-        .nav-menu a:hover {
-            background-color: #575757; 
-            transform: scale(1.1); 
-        }
-        /* Add a press effect */
-        .nav-menu a:active {            
-            transform: scale(0.999);
-        }
+    /* Add a press effect */
+    .nav-link:active {
+        transform: scale(0.999);
+    }
 
     /* Styling for the active link */
-    .nav-menu .active {
+    .nav-link.active {
         background-color: #007bff;
         color: white;
     }
